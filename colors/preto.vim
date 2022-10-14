@@ -19,39 +19,67 @@ let g:colors_name = "preto"
 
 " Palette ---------------------------------------------------------------- {{{1
 
+" Credit: junegunn/seoul256.vim (MIT)
+if !exists('s:rgb_map')
+  if get(g:, 'seoul256_srgb', 0)
+    let s:rgb_map =
+        \{108: '#87af87', 109: '#87afaf', 161: '#d7005f', 216: '#ffaf87',
+        \ 232: '#080808', 233: '#121212', 234: '#1c1c1c',
+        \ 235: '#262626', 236: '#303030', 237: '#3a3a3a',
+        \ 238: '#444444', 239: '#4e4e4e', 240: '#585858',
+        \ 241: '#626262', 242: '#6c6c6c', 243: '#767676',
+        \ 244: '#808080', 245: '#8a8a8a', 246: '#949494',
+        \ 247: '#9e9e9e', 248: '#a8a8a8', 249: '#b2b2b2',
+        \ 250: '#bcbcbc', 251: '#c6c6c6', 252: '#d0d0d0',
+        \ 253: '#dadada', 254: '#e4e4e4', 255: '#eeeeee'}
+  else
+    let s:rgb_map =
+        \{108: '#98bc99', 109: '#98bcbd', 161: '#e12672', 216: '#ffbd98',
+        \ 232: '#060606', 233: '#171717', 234: '#252525',
+        \ 235: '#333233', 236: '#3f3f3f', 237: '#4b4b4b',
+        \ 238: '#565656', 239: '#616161', 240: '#6b6b6b',
+        \ 241: '#757575', 242: '#6c6c6c', 243: '#767676',
+        \ 244: '#808080', 245: '#8a8a8a', 246: '#949494',
+        \ 247: '#9e9e9e', 248: '#a8a8a8', 249: '#bfbfbf',
+        \ 250: '#c8c8c8', 251: '#d1d0d1', 252: '#d9d9d9',
+        \ 253: '#e1e1e1', 254: '#e9e9e9', 255: '#f1f1f1'}
+  endif
+endif
+
 let s:palette = {}
 
 let s:palette.black  = [16 , "#000000"]
-let s:palette.gray01 = [232, "#080808"]
-let s:palette.gray02 = [233, "#121212"]
-let s:palette.gray03 = [234, "#1c1c1c"]
-let s:palette.gray04 = [235, "#262626"]
-let s:palette.gray05 = [236, "#303030"]
-let s:palette.gray06 = [237, "#3a3a3a"]
-let s:palette.gray07 = [238, "#444444"]
-let s:palette.gray08 = [239, "#4e4e4e"]
-let s:palette.gray09 = [240, "#585858"]
-let s:palette.gray10 = [241, "#626262"]
-let s:palette.gray11 = [242, "#6c6c6c"]
-let s:palette.gray12 = [243, "#767676"]
-let s:palette.gray13 = [244, "#808080"]
-let s:palette.gray14 = [245, "#8a8a8a"]
-let s:palette.gray15 = [246, "#949494"]
-let s:palette.gray16 = [247, "#9e9e9e"]
-let s:palette.gray17 = [248, "#a8a8a8"]
-let s:palette.gray18 = [249, "#b2b2b2"]
-let s:palette.gray19 = [250, "#bcbcbc"]
-let s:palette.gray20 = [251, "#c6c6c6"]
-let s:palette.gray21 = [252, "#d0d0d0"]
-let s:palette.gray22 = [253, "#dadada"]
-let s:palette.gray23 = [254, "#e4e4e4"]
-let s:palette.white  = [255, "#eeeeee"]
+let s:palette.gray01 = [232, get(s:rgb_map, 232)]
+let s:palette.gray02 = [233, get(s:rgb_map, 233)]
+let s:palette.gray03 = [234, get(s:rgb_map, 234)]
+let s:palette.gray04 = [235, get(s:rgb_map, 235)]
+let s:palette.gray05 = [236, get(s:rgb_map, 236)]
+let s:palette.gray06 = [237, get(s:rgb_map, 237)]
+let s:palette.gray07 = [238, get(s:rgb_map, 238)]
+let s:palette.gray08 = [239, get(s:rgb_map, 239)]
+let s:palette.gray09 = [240, get(s:rgb_map, 240)]
+let s:palette.gray10 = [241, get(s:rgb_map, 241)]
+let s:palette.gray11 = [242, get(s:rgb_map, 242)]
+let s:palette.gray12 = [243, get(s:rgb_map, 243)]
+let s:palette.gray13 = [244, get(s:rgb_map, 244)]
+let s:palette.gray14 = [245, get(s:rgb_map, 245)]
+let s:palette.gray15 = [246, get(s:rgb_map, 246)]
+let s:palette.gray16 = [247, get(s:rgb_map, 247)]
+let s:palette.gray17 = [248, get(s:rgb_map, 248)]
+let s:palette.gray18 = [249, get(s:rgb_map, 249)]
+let s:palette.gray19 = [250, get(s:rgb_map, 250)]
+let s:palette.gray20 = [251, get(s:rgb_map, 251)]
+let s:palette.gray21 = [252, get(s:rgb_map, 252)]
+let s:palette.gray22 = [253, get(s:rgb_map, 253)]
+let s:palette.gray23 = [254, get(s:rgb_map, 254)]
+let s:palette.white  = [255, get(s:rgb_map, 255)]
 
-let s:palette.red    = [161, "#d7005f"]
-let s:palette.green  = [108, "#87af87"]
-let s:palette.blue   = [109, "#87afaf"]
+let s:palette.red    = [161, get(s:rgb_map, 161)]
+let s:palette.green  = [108, get(s:rgb_map, 108)]
+let s:palette.blue   = [109, get(s:rgb_map, 109)]
+" See: itchyny/lightline.vim/colorscheme/seoul256.vim
 let s:palette.yellow = [3  , "#d8af5f"]
-let s:palette.orange = [216, "#d7875f"]
+let s:palette.orange = [216, get(s:rgb_map, 216)]
 
 
 " Utilities -------------------------------------------------------------- {{{1
