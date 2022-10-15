@@ -11,10 +11,10 @@
 
 set background=dark
 highlight clear
-if exists("syntax_on")
+if exists('syntax_on')
   syntax reset
 endif
-let g:colors_name = "preto"
+let g:colors_name = 'preto'
 
 
 " Palette ---------------------------------------------------------------- {{{1
@@ -48,7 +48,7 @@ endif
 
 let s:palette = {}
 
-let s:palette.black  = [16 , "#000000"]
+let s:palette.black  = [16 , '#000000']
 let s:palette.gray01 = [232, get(s:rgb_map, 232)]
 let s:palette.gray02 = [233, get(s:rgb_map, 233)]
 let s:palette.gray03 = [234, get(s:rgb_map, 234)]
@@ -78,7 +78,7 @@ let s:palette.red    = [161, get(s:rgb_map, 161)]
 let s:palette.green  = [108, get(s:rgb_map, 108)]
 let s:palette.blue   = [109, get(s:rgb_map, 109)]
 " See: itchyny/lightline.vim/colorscheme/seoul256.vim
-let s:palette.yellow = [3  , "#d8af5f"]
+let s:palette.yellow = [3  , '#d8af5f']
 let s:palette.orange = [216, get(s:rgb_map, 216)]
 
 
