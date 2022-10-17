@@ -125,7 +125,7 @@ call s:HL('SpecialComment', s:palette.gray12, s:palette.black , 'none')
 call s:HL('Title'         , s:palette.gray12, s:palette.black , 'bold')
 call s:HL('Todo'          , s:palette.red   , s:palette.black , 'none')
 
-" LINES                   , COLUMNS
+" LINES, COLUMNS
 call s:HL('LineNr'        , s:palette.gray06, s:palette.black , 'bold')
 call s:HL('CursorLine'    , s:palette.white , s:palette.gray03, 'none')
 call s:HL('CursorLineNr'  , s:palette.gray09, s:palette.black , 'bold')
